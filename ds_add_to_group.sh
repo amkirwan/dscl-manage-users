@@ -12,7 +12,7 @@
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
 DIRADMIN="diradmin"
-DIRADMINPW="onetime"
+DIRADMINPW="CHANGE_ME"
 DEFAULT_GROUP="workgroup"
 ADMIN_GROUP="bwanadmingroup"
 LDAP_ADMIN_GROUP="admin"
@@ -102,10 +102,6 @@ add_to_groups()
 		dseditgroup -o edit -n /LDAPv3/127.0.0.1 -u $DIRADMIN -P $DIRADMINPW -a $partners_uid -t user $ADMIN_GROUP
 		dseditgroup -o edit -n /LDAPv3/127.0.0.1 -u $DIRADMIN -P $DIRADMINPW -a $partners_uid -t user $LDAP_ADMIN_GROUP
 		sudo dseditgroup -o edit -n /Local/Default -u $DIRADMIN -P $DIRADMINPW -a $partners_uid -t user $LOCAL_ADMIN_GROUP
-		
-		#dseditgroup -u $DIRADMIN -P $DIRADMINPW -o edit -n /LDAPv3/127.0.0.1 -a $partners_uid -t user $ADMIN_GROUP
-		#dseditgroup -u $DIRADMIN -P $DIRADMINPW -o edit -n /LDAPv3/127.0.0.1 -a $partners_uid -t user $LDAP_ADMIN_GROUP
-		#sudo dseditgroup -u $DIRADMIN -P $DIRADMINPW -o edit -n /Local/Default -a $partners_uid -t user $LOCAL_ADMIN_GROUP
 		echo "########################################################"
 		echo "Added user: $partners_uid to admin group"
 	fi

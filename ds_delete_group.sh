@@ -9,7 +9,7 @@
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
 DIRADMIN="diradmin"
-DIRADMINPW="onetime"
+DIRADMINPW="CHANGE_ME"
 DEFAULT_GROUP="workgroup"
 ADMIN_GROUP="bwanadmingroup"
 LDAP_ADMIN_GROUP="admin"
